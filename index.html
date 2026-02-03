@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Brandon Steven Loosle - Resume</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    
-    <!-- html2pdf.js CDN - includes html2canvas + jsPDF -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
     <style>
         :root {
             --primary: #1e40af;
@@ -40,8 +36,9 @@
         header {
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
-            padding: 3.5rem 2.5rem 2rem;
+            padding: 3rem 2.5rem 2rem;
             text-align: center;
+            position: relative;
         }
         header h1 {
             font-size: 2.8rem;
@@ -66,26 +63,25 @@
             flex-wrap: wrap;
             gap: 1.5rem;
             font-size: 1.1rem;
-            margin-top: 0.5rem;
+            margin: 0.8rem 0 1.5rem;
         }
         .contact a { color: white; text-decoration: none; }
         .contact a:hover { text-decoration: underline; }
         .download-btn {
-            margin-top: 1.5rem;
+            display: inline-block;
             background: white;
             color: var(--primary);
             font-weight: 600;
-            padding: 0.9rem 2rem;
-            border: 2px solid white;
+            padding: 0.8rem 1.8rem;
             border-radius: 50px;
-            cursor: pointer;
-            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 1rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
         }
         .download-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
             background: #f0f0f0;
         }
         main {
@@ -113,13 +109,13 @@
         }
         h3 {
             font-size: 1.35rem;
-            margin: 1.2rem 0 0.4rem;
+            margin: 1.3rem 0 0.5rem;
             color: var(--text);
         }
         .meta {
             color: var(--text-light);
             font-style: italic;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.7rem;
             font-size: 0.95rem;
         }
         ul {
@@ -128,35 +124,22 @@
         }
         ul li {
             position: relative;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.65rem;
         }
         ul li::before {
             content: "•";
             color: var(--primary);
             position: absolute;
             left: -1.2rem;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             line-height: 1;
         }
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        .skill-item {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
-        .skill-item strong { color: var(--primary); }
-        .sidebar section { margin-bottom: 2.5rem; }
+        .sidebar section { margin-bottom: 2.8rem; }
         .sidebar h2 { font-size: 1.7rem; }
         @media (max-width: 768px) {
             main { flex-direction: column; gap: 2rem; padding: 1.8rem; }
             .sidebar { order: -1; background: transparent; border: none; padding: 0; }
-            header { padding: 2.5rem 1.5rem 2rem; }
+            header { padding: 2.5rem 1.5rem 1.8rem; }
             header h1 { font-size: 2.4rem; }
         }
         @media print {
@@ -166,58 +149,133 @@
             .sidebar { background: white; border: none; padding: 0; break-inside: avoid; }
             header { background: #1e40af; color: white; }
             header img { border-color: #000; }
-            .download-btn { display: none; } /* Hide button when printing/saving as PDF */
+            .download-btn { display: none; } /* Hide button when printing */
         }
     </style>
 </head>
 <body>
-    <div class="container" id="resume-container">
+    <div class="container">
         <header>
             <h1>Brandon Steven Loosle</h1>
+            <!-- Upload your photo to /images/profile.jpg (or update the src) -->
             <img src="/images/profile.jpg" alt="Brandon Steven Loosle - Professional Headshot">
             <div class="contact">
-                <span>249N 1210W St George Utah</span>
+                <span>249 N 1210 W, St George, Utah</span>
                 <span>512-646-9681</span>
                 <a href="mailto:Me@brandon.Stevenloosle.com">Me@brandon.Stevenloosle.com</a>
             </div>
-            <!-- Download PDF Button -->
-            <button class="download-btn" id="downloadPdfBtn">Download Resume as PDF</button>
+            <a href="#" onclick="window.print(); return false;" class="download-btn">Download PDF</a>
         </header>
         <main>
             <aside class="sidebar">
-                <!-- Your sidebar content remains unchanged -->
                 <section>
                     <h2>SKILLS</h2>
-                    <!-- ... rest of skills ... -->
+                    <h3>Technical / Professional Skills</h3>
+                    <ul>
+                        <li><strong>Mechanic / Alignment Technician</strong>: 6+ months hands-on experience in brake jobs, AC repair, suspension work, vehicle diagnostics, precision alignments, and general repairs.</li>
+                        <li><strong>Tire Technician</strong>: 6 months experience installing/balancing tires, routine maintenance, and customer support.</li>
+                        <li><strong>Freelance / Volunteer Mechanic</strong>: 2 years independent experience.</li>
+                        <li><strong>3D Printing Technician</strong>: 10 years operating, maintaining, troubleshooting 3D printers; strong design and additive manufacturing knowledge.</li>
+                        <li><strong>Escape Room Electronics</strong>: Designed complex puzzles with Arduino, circuits, C++, and various programming standards.</li>
+                    </ul>
+                    <h3>Information Technology Proficiency</h3>
+                    <p>Proficient in a wide range of IT tools and applications, especially in educational settings. Quick to learn new systems; experienced collaborating with school IT teams to troubleshoot hardware/software issues with minimal disruption. Provided IT support and training to staff, integrated AI models (including ChatGPT 3.5/4 and similar tools) into education, and supported modern ed-tech platforms.</p>
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li><strong>Communication</strong>: Excellent verbal/written skills; adept at explaining technical concepts to non-technical audiences.</li>
+                        <li><strong>Conflict Resolution & Teamwork</strong>: Skilled in de-escalation, fostering positive environments, and collaborative problem-solving.</li>
+                    </ul>
                 </section>
-                <!-- ... rest of sidebar sections ... -->
+                <section>
+                    <h2>EDUCATION / CERTIFICATIONS</h2>
+                    <h3>St George Academy</h3>
+                    <div class="meta">St George, UT — High School Diploma<br>May 2020</div>
+                    <p>Graduated from a science and technology-focused high school with hands-on experience in 3D printing, mechanics, and teaching.</p>
+                    <h3>ParaProfessional Educator</h3>
+                    <div class="meta">Certified by Praxis ParaPro Assessment</div>
+                    <ul>
+                        <li>Passed Praxis ParaPro, demonstrating proficiency in reading, writing, math, and classroom application.</li>
+                        <li>Strong understanding of instructional techniques and classroom management for diverse learners.</li>
+                    </ul>
+                    <h3>MANDT Training Certification</h3>
+                    <div class="meta">Issued: June 4, 2025 | MANDT System</div>
+                    <ul>
+                        <li>Training in de-escalation, crisis intervention, and safe behavior management.</li>
+                        <li>Certificate available upon request.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>LANGUAGES</h2>
+                    <ul>
+                        <li>English (native speaker)</li>
+                        <li>American Sign Language (fluent; experience teaching others)</li>
+                    </ul>
+                </section>
             </aside>
             <div class="main-content">
                 <section>
                     <h2>Experience</h2>
-                    <!-- ... all your experience content ... -->
+                    <h3>Behavior Specialist & IT Support</h3>
+                    <div class="meta">St. George Academy College Preparatory High School, St. George, UT<br>March 2025 – Present</div>
+                    <ul>
+                        <li>Developed and implemented individualized behavior intervention plans for positive learning environments.</li>
+                        <li>Collaborated with faculty on behavioral challenges and trained staff in management/de-escalation techniques.</li>
+                        <li>Provided IT support: diagnosed/resolved hardware/software issues for staff and students.</li>
+                        <li>Expanded expertise in behavioral strategies and educational technology systems.</li>
+                    </ul>
+                    <h3>Alignment Technician & Mechanic</h3>
+                    <div class="meta">Big O Tires, St. George Boulevard, St. George, UT<br>June 2024 – March 2025</div>
+                    <ul>
+                        <li>Performed precision vehicle alignments for optimal tire performance and safety.</li>
+                        <li>Assisted with brake jobs, AC repairs, suspension maintenance, and diagnostics.</li>
+                        <li>Contributed to high customer satisfaction through troubleshooting and quality work.</li>
+                    </ul>
+                    <h3>Paraeducator – Special Education Program</h3>
+                    <div class="meta">Madison High School, Rexburg, ID & St. George Academy, St. George, UT<br>August 2023 – May 2024</div>
+                    <ul>
+                        <li>Supported students with diverse needs through accommodations, modifications, and evidence-based techniques.</li>
+                        <li>Managed classroom behaviors and dynamics for inclusive learning.</li>
+                        <li>Passed ParaPro Praxis Test, showing strong foundational skills.</li>
+                    </ul>
+                    <h3>Escape Room Consultant</h3>
+                    <div class="meta">Independent Consultant (Rexburg Re Escape, Vammose Escape, Gnarly Escape)<br>January 2023 – February 2024</div>
+                    <ul>
+                        <li>Advised on design, construction, and operation of escape rooms.</li>
+                        <li>Troubleshot/ repaired electronics; created complex puzzles using Arduino, circuits, C++, etc.</li>
+                    </ul>
+                    <h3>Tire Technician</h3>
+                    <div class="meta">Big O Tires, St. George Boulevard, St. George, UT<br>6 months</div>
+                    <ul>
+                        <li>Assisted customers with tire selection, installation, balancing, and routine maintenance.</li>
+                    </ul>
+                    <h3>Host</h3>
+                    <div class="meta">Chef Alfredo’s, St. George, UT<br>February 2019 – February 2020</div>
+                    <ul>
+                        <li>Greeted/seated customers, handled reservations, and resolved issues (including fixing appliances like soda fountains).</li>
+                    </ul>
+                    <h3>Volunteer Temple Facility Maintenance</h3>
+                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, St. George Utah Temple</div>
+                    <ul>
+                        <li>Handled upkeep, repairs, and maintenance; specialized in woodworking, electrical work, and problem-solving.</li>
+                    </ul>
+                    <h3>Missionary Volunteer</h3>
+                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, San Antonio, TX<br>October 2020 – October 2022 (2 years)</div>
+                    <ul>
+                        <li>Conducted outreach, mentorship, and counseling; developed empathy and cross-cultural skills (including ASL).</li>
+                    </ul>
+                    <h3>Sleep in Heavenly Peace</h3>
+                    <div class="meta">Volunteer Bed Builder — 3 months</div>
+                    <ul>
+                        <li>Built/delivered beds for underprivileged children; applied carpentry and teamwork skills.</li>
+                    </ul>
+                    <h3>Brigham’s Playhouse</h3>
+                    <div class="meta">Community Theater — Stagehand, Light Technician, Prop & Stage Builder — 6 months (over 3 years)</div>
+                    <ul>
+                        <li>Set up stages/lighting, designed props, and supported productions.</li>
+                    </ul>
                 </section>
             </div>
         </main>
     </div>
-
-    <!-- JavaScript to generate PDF on button click -->
-    <script>
-        document.getElementById('downloadPdfBtn').addEventListener('click', () => {
-            const element = document.getElementById('resume-container');
-            
-            // Optional: better quality & layout options
-            const opt = {
-                margin:       0.5,          // inches
-                filename:     'Brandon_Steven_Loosle_Resume.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  { scale: 2, useCORS: true }, // higher scale = sharper, but slower
-                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-
-            // Generate and download
-            html2pdf().set(opt).from(element).save();
-        });
-    </script>
 </body>
 </html>
