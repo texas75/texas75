@@ -78,6 +78,7 @@
             margin-top: 1rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         .download-btn:hover {
             transform: translateY(-2px);
@@ -149,7 +150,7 @@
             .sidebar { background: white; border: none; padding: 0; break-inside: avoid; }
             header { background: #1e40af; color: white; }
             header img { border-color: #000; }
-            .download-btn { display: none; } /* Hide button when printing */
+            .download-btn { display: none; }
         }
     </style>
 </head>
@@ -157,50 +158,51 @@
     <div class="container">
         <header>
             <h1>Brandon Steven Loosle</h1>
-            <!-- Upload your photo to /images/profile.jpg (or update the src) -->
-            <img src="/images/profile.jpg" alt="Brandon Steven Loosle - Professional Headshot">
+            <!-- Upload your photo to the repo root or /images/ folder, e.g., https://github.com/yourusername/your-repo/blob/main/profile.jpg -->
+            <!-- For GitHub Pages, use: src="https://raw.githubusercontent.com/yourusername/your-repo/main/profile.jpg" or just "/profile.jpg" if in root -->
+            <img src="/images/profile.jpg" alt="Brandon Steven Loosle - Professional Headshot" onerror="this.style.display='none';">
             <div class="contact">
                 <span>249 N 1210 W, St George, Utah</span>
                 <span>512-646-9681</span>
                 <a href="mailto:Me@brandon.Stevenloosle.com">Me@brandon.Stevenloosle.com</a>
             </div>
-            <a href="#" onclick="window.print(); return false;" class="download-btn">Download PDF</a>
+            <button onclick="window.print()" class="download-btn">Download as PDF</button>
         </header>
         <main>
             <aside class="sidebar">
                 <section>
                     <h2>SKILLS</h2>
-                    <h3>Technical / Professional Skills</h3>
+                    <h3>Technical Skills:</h3>
                     <ul>
-                        <li><strong>Mechanic / Alignment Technician</strong>: 6+ months hands-on experience in brake jobs, AC repair, suspension work, vehicle diagnostics, precision alignments, and general repairs.</li>
-                        <li><strong>Tire Technician</strong>: 6 months experience installing/balancing tires, routine maintenance, and customer support.</li>
-                        <li><strong>Freelance / Volunteer Mechanic</strong>: 2 years independent experience.</li>
-                        <li><strong>3D Printing Technician</strong>: 10 years operating, maintaining, troubleshooting 3D printers; strong design and additive manufacturing knowledge.</li>
-                        <li><strong>Escape Room Electronics</strong>: Designed complex puzzles with Arduino, circuits, C++, and various programming standards.</li>
+                        <li><strong>Mechanic (6 months experience):</strong> Skilled in brake jobs, AC repair, suspension work, and vehicle diagnostics.</li>
+                        <li><strong>Tire Technician:</strong> 6 months of hands-on experience in providing efficient technical support and addressing complex issues.</li>
+                        <li><strong>Lube Technician:</strong> 6 months of experience in performing routine automotive maintenance, including oil changes and lubrication, ensuring vehicle longevity and reliability.</li>
+                        <li><strong>Freelance mechanic:</strong> 2 years experience working as an independent volunteer mechanic.</li>
+                        <li><strong>3D Printing Technician:</strong> 10 years of experience in operating, maintaining, and troubleshooting various 3D printers, with a strong understanding of design principles and additive manufacturing processes.</li>
                     </ul>
                     <h3>Information Technology Proficiency</h3>
-                    <p>Proficient in a wide range of IT tools and applications, especially in educational settings. Quick to learn new systems; experienced collaborating with school IT teams to troubleshoot hardware/software issues with minimal disruption. Provided IT support and training to staff, integrated AI models (including ChatGPT 3.5/4 and similar tools) into education, and supported modern ed-tech platforms.</p>
-                    <h3>Soft Skills</h3>
+                    <p>Proficient in a broad spectrum of IT applications, tools, and technologies, particularly within educational environments, showcasing a strong capacity to quickly adapt to new software and systems. Extensive experience collaborating with school IT departments to troubleshoot and resolve technical issues, ensuring minimal disruption to educational processes and maintaining high operational efficiency in academic settings. Experienced in providing IT support and training to educators and administrative staff, facilitating the seamless integration of technology into the classroom and enhancing the overall teaching and learning experience. Capable of navigating and optimizing educational technology platforms and digital learning tools, contributing to the development and support of a modern, tech-enabled educational environment. Including AI models and their inclusion into the educational world. Proficiency in chat GPT 3.5 and 4 as well as bard.</p>
+                    <h3>Soft Skills:</h3>
                     <ul>
-                        <li><strong>Communication</strong>: Excellent verbal/written skills; adept at explaining technical concepts to non-technical audiences.</li>
-                        <li><strong>Conflict Resolution & Teamwork</strong>: Skilled in de-escalation, fostering positive environments, and collaborative problem-solving.</li>
+                        <li><strong>Communication</strong>: Excellent verbal and written communication skills, adept at explaining technical concepts to non-technical audiences and collaborating effectively with diverse teams.</li>
+                        <li><strong>Conflict Resolution</strong>: Skilled in addressing interpersonal conflicts, fostering a positive work environment, and working collaboratively to find solutions that satisfy all parties involved.</li>
                     </ul>
                 </section>
                 <section>
                     <h2>EDUCATION / CERTIFICATIONS</h2>
                     <h3>St George Academy</h3>
-                    <div class="meta">St George, UT — High School Diploma<br>May 2020</div>
-                    <p>Graduated from a science and technology-focused high school with hands-on experience in 3D printing, mechanics, and teaching.</p>
+                    <div class="meta">St George UT — High School diploma<br>May 2020</div>
+                    <p>Graduated from a science and technology-focused high school with experience in 3d printing, mechanics, and teaching skills</p>
                     <h3>ParaProfessional Educator</h3>
                     <div class="meta">Certified by Praxis ParaPro Assessment</div>
                     <ul>
-                        <li>Passed Praxis ParaPro, demonstrating proficiency in reading, writing, math, and classroom application.</li>
-                        <li>Strong understanding of instructional techniques and classroom management for diverse learners.</li>
+                        <li>Successfully attained the Praxis ParaPro Certification, demonstrating proficiency in reading, writing, and math, as well as the ability to apply these skills in classroom settings.</li>
+                        <li>Developed a strong understanding of instructional techniques and classroom management strategies, tailored for diverse learning environments.</li>
                     </ul>
                     <h3>MANDT Training Certification</h3>
-                    <div class="meta">Issued: June 4, 2025 | MANDT System</div>
+                    <div class="meta">Issued: Jun 4, 2025 | MANDT System</div>
                     <ul>
-                        <li>Training in de-escalation, crisis intervention, and safe behavior management.</li>
+                        <li>Completed training in MANDT System, focusing on de-escalation techniques, crisis intervention, and safe management of disruptive behavior.</li>
                         <li>Certificate available upon request.</li>
                     </ul>
                 </section>
@@ -208,7 +210,7 @@
                     <h2>LANGUAGES</h2>
                     <ul>
                         <li>English (native speaker)</li>
-                        <li>American Sign Language (fluent; experience teaching others)</li>
+                        <li>American sign language (fluent speaker) experience teaching others.</li>
                     </ul>
                 </section>
             </aside>
@@ -216,62 +218,92 @@
                 <section>
                     <h2>Experience</h2>
                     <h3>Behavior Specialist & IT Support</h3>
-                    <div class="meta">St. George Academy College Preparatory High School, St. George, UT<br>March 2025 – Present</div>
+                    <div class="meta">St. George Academy College Preparatory High School, St. George Utah<br>March 2025 – Present</div>
                     <ul>
-                        <li>Developed and implemented individualized behavior intervention plans for positive learning environments.</li>
-                        <li>Collaborated with faculty on behavioral challenges and trained staff in management/de-escalation techniques.</li>
-                        <li>Provided IT support: diagnosed/resolved hardware/software issues for staff and students.</li>
-                        <li>Expanded expertise in behavioral strategies and educational technology systems.</li>
+                        <li>Developed and implemented individualized behavior intervention plans, fostering a positive learning environment.</li>
+                        <li>Collaborated with faculty to address student behavioral challenges, enhancing academic and social outcomes.</li>
+                        <li>Provided training on classroom management and de-escalation techniques, strengthening school-wide behavioral support.</li>
+                        <li>Performed IT support, diagnosing and resolving hardware and software issues for staff and students.</li>
+                        <li>Continuously expanded expertise in behavioral strategies and IT systems, supporting school operations.</li>
                     </ul>
+
                     <h3>Alignment Technician & Mechanic</h3>
-                    <div class="meta">Big O Tires, St. George Boulevard, St. George, UT<br>June 2024 – March 2025</div>
+                    <div class="meta">Big O Tires st George Boulevard<br>June 2024 – March 2025</div>
                     <ul>
-                        <li>Performed precision vehicle alignments for optimal tire performance and safety.</li>
-                        <li>Assisted with brake jobs, AC repairs, suspension maintenance, and diagnostics.</li>
-                        <li>Contributed to high customer satisfaction through troubleshooting and quality work.</li>
+                        <li>Perform precision vehicle alignment services, ensuring optimal tire performance and safety.</li>
+                        <li>Assist lead mechanics with a variety of mechanical tasks, learning hands-on automotive repair skills.</li>
+                        <li>Proficient in performing brake jobs, air conditioning (AC) repairs, and suspension system maintenance.</li>
+                        <li>Diagnose and troubleshot vehicle issues, contributing to a high level of customer satisfaction.</li>
+                        <li>Continuously expanding knowledge in automotive repair, including advanced mechanical systems.</li>
                     </ul>
+
                     <h3>Paraeducator – Special Education Program</h3>
-                    <div class="meta">Madison High School, Rexburg, ID & St. George Academy, St. George, UT<br>August 2023 – May 2024</div>
+                    <div class="meta">Madison High School, Rexburg, Idaho<br>St. George Academy College Preparatory High School, St. George Utah<br>August 2023 – May 2024</div>
                     <ul>
-                        <li>Supported students with diverse needs through accommodations, modifications, and evidence-based techniques.</li>
-                        <li>Managed classroom behaviors and dynamics for inclusive learning.</li>
-                        <li>Passed ParaPro Praxis Test, showing strong foundational skills.</li>
+                        <li>Collaborated with educators, therapists, and parents to support students with diverse learning needs, ensuring each individual received the necessary accommodations and modifications for success.</li>
+                        <li>Managed classroom behaviors and dynamics, establishing a conducive learning environment for students of varying abilities and needs.</li>
+                        <li>Utilized evidence-based techniques to foster social, emotional, and academic growth in students with special needs.</li>
+                        <li>Passed the ParaPro Praxis Test, showcasing proficiency in reading, writing, and mathematics concepts essential for supporting K-12 students</li>
                     </ul>
+
                     <h3>Escape Room Consultant</h3>
-                    <div class="meta">Independent Consultant (Rexburg Re Escape, Vammose Escape, Gnarly Escape)<br>January 2023 – February 2024</div>
+                    <div class="meta">Independent Consultant<br>Jan 2023 – Feb 2024</div>
                     <ul>
-                        <li>Advised on design, construction, and operation of escape rooms.</li>
-                        <li>Troubleshot/ repaired electronics; created complex puzzles using Arduino, circuits, C++, etc.</li>
+                        <li>Consult and advise on the design, construction, and operation of escape rooms for various clients</li>
+                        <li>Troubleshoot and repair electronic components and systems within escape rooms to ensure smooth operation</li>
+                        <li>Created complex electronic puzzles using Arduino, integrated circuits, C++, and many other standards of programming.</li>
+                        <li>Worked for Rexburg Re Escape, Vammose escape, and Gnarly escape</li>
                     </ul>
+
                     <h3>Tire Technician</h3>
-                    <div class="meta">Big O Tires, St. George Boulevard, St. George, UT<br>6 months</div>
+                    <div class="meta">Big O Tires, St. George UT Boulevard Location<br>6 months experience</div>
                     <ul>
-                        <li>Assisted customers with tire selection, installation, balancing, and routine maintenance.</li>
+                        <li>Provided excellent customer service by helping customers choose the right tires for their vehicles</li>
+                        <li>Installed and balanced new tires and performed routine maintenance on vehicles</li>
                     </ul>
+
                     <h3>Host</h3>
-                    <div class="meta">Chef Alfredo’s, St. George, UT<br>February 2019 – February 2020</div>
+                    <div class="meta">Chef Alfredo’s, St. George UT<br>Feb 2019 – Feb 2020</div>
                     <ul>
-                        <li>Greeted/seated customers, handled reservations, and resolved issues (including fixing appliances like soda fountains).</li>
+                        <li>Greeted and seated customers and provided menus and specials to enhance their dining experience</li>
+                        <li>Answered phone calls and made reservations for customers</li>
+                        <li>Solved problems as they came up including fixing soda fountains and other kitchen appliances</li>
                     </ul>
-                    <h3>Volunteer Temple Facility Maintenance</h3>
-                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, St. George Utah Temple</div>
+
+                    <h3>Volunteer Temple facility maintenance</h3>
+                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, St George utah Temple.</div>
                     <ul>
-                        <li>Handled upkeep, repairs, and maintenance; specialized in woodworking, electrical work, and problem-solving.</li>
+                        <li>Responsible for the upkeep, repair, and maintenance of temple facilities, ensuring a clean, safe, and welcoming environment for all patrons.</li>
+                        <li>Performing a variety of tasks, from routine cleaning to specialized maintenance work, contributing to the overall upkeep and functionality of the temple.</li>
+                        <li>Utilizing problem-solving skills to promptly and efficiently address facility-related issues.</li>
+                        <li>Demonstrating a strong commitment to community service and spiritual growth, viewing the maintenance of the temple as a form of service to both the community and God.</li>
+                        <li>I specialize in woodworking, electrical work, and overall problem-solving.</li>
                     </ul>
+
                     <h3>Missionary Volunteer</h3>
-                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, San Antonio, TX<br>October 2020 – October 2022 (2 years)</div>
+                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, San Antonio, TX: Oct 2020 – Oct 2022 (2 Years)</div>
                     <ul>
-                        <li>Conducted outreach, mentorship, and counseling; developed empathy and cross-cultural skills (including ASL).</li>
+                        <li>Engaged in a two-year mission, dedicating full-time service to The Church of Jesus Christ of Latter-day Saints,</li>
+                        <li>demonstrating commitment, resilience, and adaptability.</li>
+                        <li>Conducted community outreach initiatives, establishing and nurturing relationships with diverse local communities to promote spiritual guidance, support, and education.</li>
+                        <li>Provided one-on-one mentorship and counseling to individuals seeking spiritual guidance, developing strong interpersonal and empathetic communication skills.</li>
+                        <li>Participated in language and cultural immersion, enhancing cross-cultural communication and language proficiency (American sign language).</li>
                     </ul>
+
                     <h3>Sleep in Heavenly Peace</h3>
-                    <div class="meta">Volunteer Bed Builder — 3 months</div>
+                    <div class="meta">Volunteer Bed Builder Duration: 3 months</div>
                     <ul>
-                        <li>Built/delivered beds for underprivileged children; applied carpentry and teamwork skills.</li>
+                        <li>Participated in a community-driven project to build and deliver beds for underprivileged children in the local area.</li>
+                        <li>Demonstrated strong teamwork and carpentry skills while assembling bed frames and ensuring a high standard of quality and safety .</li>
+                        <li>Contributed to improving the living conditions and well-being of disadvantaged children by providing them with a comfortable place to sleep.</li>
                     </ul>
+
                     <h3>Brigham’s Playhouse</h3>
-                    <div class="meta">Community Theater — Stagehand, Light Technician, Prop & Stage Builder — 6 months (over 3 years)</div>
+                    <div class="meta">Community Theater Position: Stagehand, Light Technician, and Prop & Stage Builder Duration: 6 months (spread over 3 years)</div>
                     <ul>
-                        <li>Set up stages/lighting, designed props, and supported productions.</li>
+                        <li>Collaborated with the production team to set up, maintain, and dismantle stage equipment, ensuring seamless performances and efficient transitions.</li>
+                        <li>Operated lighting equipment and implemented creative lighting designs to enhance the visual impact of theatrical productions.</li>
+                        <li>Assisted in designing, building, and repairing stage props and set pieces, contributing to the immersive atmosphere of various performances.</li>
                     </ul>
                 </section>
             </div>
